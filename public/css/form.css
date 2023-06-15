@@ -1,0 +1,16 @@
+.article-form {
+    padding-top: 150px;
+    padding-left: 200px;
+}
+
+.backbutton {
+    padding: 10px;
+    margin-left: -150px;
+    width: fit-content;
+    background-color: #3CB371;
+    height: fit-content;
+}
+
+.backbutton a {
+    color: white;
+}

@@ -1,0 +1,30 @@
+.containerPeople {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(50, 1fr);
+}
+
+.containerPeople .table {
+    grid-column: 2/19;
+    grid-row: 4/50;
+    display: grid;
+}
+
+.newPerson {
+    grid-row: 3/4;
+    grid-column: 16/20;
+    text-align: center;
+    background-color: #3CB371;
+    margin: 15px;
+}
+
+.newPerson a {
+    color: white;
+    font-size: 25px;
+    padding: 15px;
+}
+
+.newPerson:hover {
+    background-color: #48c78e;
+}

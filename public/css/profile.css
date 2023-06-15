@@ -1,0 +1,153 @@
+.container {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: 80px repeat(8, 1fr) 80px;
+}
+
+.container .img {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background: url(/img/croped.gif) center;
+    background-size: cover;
+    z-index: -2;
+}
+
+.profilephoto {
+    grid-column: 6/8;
+    grid-row: 5/7;
+    margin-left: -10px;
+    z-index: 1000;
+}
+
+.profilephoto img {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 10px 3px black;
+    border-radius: 50%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.profilephoto img:hover {
+    overflow: visible;
+    opacity: 0.4;
+    transition: 0.6s;
+}
+
+.nameprofile {
+    grid-column: 6/8;
+    grid-row: 6/7;
+    text-align: center;
+    margin-left: -40px;
+    margin-top: 20px;
+    font-size: 25px;
+    color: white;
+}
+
+.roundbutton {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 30%;
+    text-align: center;
+    z-index: 999;
+    position: relative;
+    color: white;
+    transition: all 0.5s ease-out;
+    overflow: hidden;
+    background: #3CB371;
+}
+
+.roundbutton .icon {
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.roundbutton:hover {
+    width: 500px;
+    height: 200px;
+    background: black;
+    position: relative;
+    opacity: 0.6;
+    z-index: 999;
+    padding: 8px;
+}
+
+.roundbutton p {
+    padding-bottom: 10px;
+    display: block;
+}
+
+.roundbutton h4 {
+    display: block;
+    font-weight: bold;
+}
+
+#bubble1 {
+    grid-column: 7/13;
+    grid-row: 4/10;
+    margin-left: -50px;
+    margin-top: -10px;
+}
+
+#bubble1:hover {
+    height: 170px;
+    margin-top: -110px;
+}
+
+#bubble2 {
+    grid-column: 8/14;
+    grid-row: 5/11;
+    margin-top: 25px;
+}
+
+#bubble2:hover {
+    margin-top: -30px;
+}
+
+#bubble3 {
+    grid-column: 6/14;
+    grid-row: 7/12;
+    margin-top: 70px;
+    margin-left: -40px;
+}
+
+#bubble3:hover {
+    width: 170px;
+    height: 170px;
+    margin-left: -100px;
+}
+
+#bubble5 {
+    grid-column: 8/14;
+    grid-row: 7/11;
+    margin-top: 70px;
+    margin-left: -60px;
+}
+
+#bubble5:hover {
+    width: 400px;
+    margin-top: -5px;
+}
+
+#bubble6 {
+    width: 52px;
+    height: 52px;
+    grid-column: 5/14;
+    grid-row: 5/11;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+#bubble6 a {
+    color: white;
+}
+
+.flag {
+    width: 15px;
+    height: 10px;
+}
