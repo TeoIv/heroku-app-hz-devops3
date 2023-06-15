@@ -16,3 +16,10 @@ services:
             MYSQL_DATABASE: '${DB_DATABASE}'
         ports:
             - 3306:3306
+
+    phpmyadmin:
+        image: phpmyadmin:latest
+        ports:
+        - 9001:80
+        environment:
+        - PMA_ARBITRARY=1
