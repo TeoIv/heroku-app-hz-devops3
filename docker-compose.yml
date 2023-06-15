@@ -1,24 +1,18 @@
 version: '3'
 services:
-    laravel-app:
-        container_name: laravel-app
+    heroku-app-hz-devops:
+        container_name: heroku-app-hz-devops
         build: .
         volumes:
             - .:/var/www/html
         ports:
             - 80:80
         depends_on:
-            - laravel-mysql
-    laravel-mysql:
+            - laravel-heroku--mysql
+    laravel-heroku--mysql:
         image: mysql:8
         environment:
             MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
             MYSQL_DATABASE: '${DB_DATABASE}'
         ports:
             - 3306:3306
-    phpmyadmin:
-        image: phpmyadmin:latest
-        ports:
-            - 9001:80
-        environment:
-            - PMA_ARBITRARY=1
