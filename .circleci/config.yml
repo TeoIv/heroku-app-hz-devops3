@@ -29,7 +29,7 @@ jobs:
           force: true
       - run:
           command: |
-            heroku run --app=${HEROKU_APP_NAME}
+            heroku run --app=${HEROKU_APP_NAME} php artisan migrate --force --database=mysql
 workflows:
   deploy:
     jobs:
