@@ -2,6 +2,12 @@
 
 return [
 
+    'password_management_tools' => [
+        'LastPass',
+        'Dashlane',
+        '1Password',
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

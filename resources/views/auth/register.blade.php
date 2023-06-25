@@ -62,7 +62,14 @@
 
                                 <div class="col-md-6">
                                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
+                                    <div id="password-suggestions" style="display: none;">
+                                        <p>For better security, we recommend using a password management tool like:</p>
+                                        <ul>
+                                            <li><a href="https://lastpass.com">LastPass</a></li>
+                                            <li><a href="https://www.dashlane.com">Dashlane</a></li>
+                                            <li><a href="https://1password.com">1Password</a></li>
+                                        </ul>
+                                    </div>
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

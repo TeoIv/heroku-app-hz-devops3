@@ -19,6 +19,13 @@ module.exports = __webpack_require__(/*! ./lib/axios */ "./node_modules/axios/li
 
 "use strict";
 
+// Using JavaScript event listener
+            document.getElementById('password').addEventListener('focus', function() {
+                // Display the list of suggested password management tools
+                document.getElementById('password-suggestions').style.display = 'block';
+            });
+
+
 
 var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
 var settle = __webpack_require__(/*! ./../core/settle */ "./node_modules/axios/lib/core/settle.js");

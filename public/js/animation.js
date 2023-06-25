@@ -9,6 +9,13 @@ $(document).ready(function() {
     });
 });
 
+// Using JavaScript event listener
+document.getElementById('password').addEventListener('focus', function() {
+    // Display the list of suggested password management tools
+    document.getElementById('password-suggestions').style.display = 'block';
+});
+
+
 // Dashboard Chart used from google charts, with custom settings, only the model is taken//
 
 google.charts.load('current', {
