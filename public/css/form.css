@@ -14,3 +14,15 @@
 .backbutton a {
     color: white;
 }
+
+.form-group.required {
+    position: relative;
+}
+
+.form-group.required:after {
+    content: "*";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    color: red;
+}

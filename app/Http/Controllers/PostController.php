@@ -34,6 +34,9 @@ class PostController extends Controller
     {
         Post::create($this->validatePost());
 
+        // Store the success message in the flash data
+        session()->flash('success', 'Blog post created successfully!');
+
         return redirect()->route('posts.index');
     }
 
@@ -85,10 +88,10 @@ class PostController extends Controller
     public function validatePost(): array
     {
         return request()->validate([
-            'title' => 'required',
-            'img_url' => 'required',
-            'excerpt' => 'required',
-            'body' => 'required',
+            'title' => 'required|alpha|max:255|',
+            'excerpt' => 'required|string|max:255',
+            'body' => 'required|string',
         ]);
     }
+
 }

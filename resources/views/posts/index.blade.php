@@ -4,6 +4,7 @@
 <head>
     <title>Blog</title>
     <link rel="stylesheet" type="text/css" href="/css/blog.css">
+
 </head>
 <body class="blogbody">
 <div class="container2">
@@ -11,7 +12,25 @@
         <p> <span> W</span>elcome to my <span>B</span>log</p>
     </div>
     <div class="midcol">
-        @foreach($posts as $post)
+
+
+    @foreach($posts as $post)
+            @if (session('success'))
+                <div class="notification is-success">
+                    {{ session('success') }}
+                    <div>
+                        <h2>'You can now read and edit it <a href="{{ route('posts.show', $post) }}">{{$post->title}}</a>'</h2>
+                    </div>
+                    <button class="delete" onclick="closeSuccessMessage()"></button>
+                </div>
+            @endif
+            <script>
+                function closeSuccessMessage() {
+                    var successMessage = document.querySelector('.notification.is-success');
+                    successMessage.style.display = 'none';
+                }
+
+            </script>
             <div class="post">
                 <h2>
                     <a href="{{ route('posts.show', $post) }}">{{$post->title}}</a>
